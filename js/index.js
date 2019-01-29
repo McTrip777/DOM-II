@@ -10,7 +10,7 @@
 	// * [ ] `select`
     // * [ ] `dblclick`
     
-
+///////////////////     NAV BAR //////////////////
 const homeBtn = document.querySelectorAll('a');
 homeBtn[0].addEventListener("mouseenter", e => {   
 	// highlight the mouseenter target
@@ -45,17 +45,17 @@ homeBtn[3].addEventListener("mouseenter", e => {
 	}, 1500);
 }, false);
 
+
+///////////////////     Buttons   //////////////////
 const buttonSize1 = document.querySelector('.btn1');
 buttonSize1.addEventListener('mouseover', e =>{
 	e.target.innerHTML = "SIGN!";
 	e.target.style.color = "white";
 	e.target.style.backgroundColor = "black";
-
 setTimeout(function() {
 		e.target.innerHTML = "Sign Me up!";
 		e.target.style.backgroundColor = "";
-
-	}, 1500);
+	}, 3000);
 }, false);
 
 const buttonSize2 = document.querySelector('.btn2');
@@ -63,12 +63,11 @@ buttonSize2.addEventListener('mouseover', e =>{
 	e.target.innerHTML = "ME!";
 	e.target.style.color = "white";
 	e.target.style.backgroundColor = "black";
-
 setTimeout(function() {
 		e.target.innerHTML = "Sign Me up!";
 		e.target.style.backgroundColor = "";
 
-	}, 1500);
+	}, 3000);
 }, false);
 
 const buttonSize3 = document.querySelector('.btn3');
@@ -76,24 +75,41 @@ buttonSize3.addEventListener('mouseover', e =>{
 	e.target.innerHTML = "UP!";
 	e.target.style.color = "white";
 	e.target.style.backgroundColor = "black";
-
 setTimeout(function() {
 		e.target.innerHTML = "Sign Me up!";
 		e.target.style.backgroundColor = "";
 
-	}, 1500);
+	}, 3000);
 }, false);
 
-/*
-const aboutUsBtn = document.querySelector('.nav-link2')
+///////////////////     Bottom Image   //////////////////
+const btmImg = document.querySelector('.content-destination img');
+btmImg.addEventListener('click', e =>{
+	e.target.style.height = "30rem";
+	e.preventDefault();
+setTimeout(function() {
+	e.target.style.height = "20rem";
+	}, 100);
+}, false);
 
-aboutUsBtn.addEventListener('click', e =>{
-  console.log('I am a click')
+
+///////////////////     Welcome to Fun Bus   //////////////////
+const bgColor = document.querySelector('body');
+bgColor.addEventListener('keydown', e =>{
+	if (e.key == 'p')	
+	e.target.style.backgroundColor = 'pink'
+});
+bgColor.addEventListener('keydown', e =>{
+	if (e.key == 'b')	
+	e.target.style.backgroundColor = 'blue';
+	e.target.style.color = 'white';
 });
 
-const blogBtn = document.querySelector('.nav-link3')
 
-blogBtn.addEventListener('dblclick', e =>{
-  console.log('I am a double click')
-});
-*/
+
+
+
+
+
+
+
