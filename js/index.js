@@ -128,6 +128,8 @@ const H2tags = document.querySelectorAll('.text-content h2');
 H2tags[0].addEventListener('dblclick', e =>{
 	e.target.style.fontSize = '16rem';
 	e.target.style.color = 'silver';
+	e.stopPropagation();
+
 	setTimeout(function() {
 		e.target.style.fontSize = '';
 		e.target.style.color = '';
@@ -136,8 +138,32 @@ H2tags[0].addEventListener('dblclick', e =>{
 H2tags[1].addEventListener('dblclick', e =>{
 	e.target.style.fontSize = '16rem';
 	e.target.style.color = 'silver';
+	e.stopPropagation();
+
 	setTimeout(function() {
 		e.target.style.fontSize = '';
 		e.target.style.color = '';
 			}, 1000);
 		}, false);
+
+
+//////////////   Individual Backgrounds ///////////
+const bodies = document.querySelector('.home');
+bodies.addEventListener('dblclick', e =>{
+		e.target.style.backgroundColor = 'yellow';
+setTimeout(function() {
+		e.target.style.backgroundColor = '';
+			}, 100);
+		}, false);
+
+
+//////////////    intro img ////////////////
+const inImg = document.querySelector('header img');
+inImg.addEventListener('wheel', e =>{
+	let random = Math.random()
+	e.target.style.opacity = random;
+	e.preventDefault();
+	});
+
+
+	
