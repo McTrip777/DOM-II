@@ -1,6 +1,4 @@
 // Your code goes here
-    // * [ ] `mouseover`
-	// * [ ] `keydown`
 	// * [ ] `wheel`
 	// * [ ] `drag / drop`
 	// * [ ] `load`
@@ -8,7 +6,6 @@
 	// * [ ] `resize`
 	// * [ ] `scroll`
 	// * [ ] `select`
-    // * [ ] `dblclick`
     
 ///////////////////     NAV BAR //////////////////
 const homeBtn = document.querySelectorAll('a');
@@ -93,23 +90,54 @@ setTimeout(function() {
 }, false);
 
 
-///////////////////     Welcome to Fun Bus   //////////////////
+///////////////////     Background   //////////////////
 const bgColor = document.querySelector('body');
 bgColor.addEventListener('keydown', e =>{
 	if (e.key == 'p')	
-	e.target.style.backgroundColor = 'pink'
-});
+	e.target.style.backgroundColor = 'pink';
+
+	bgColor.addEventListener('keyup', e =>{
+			e.target.style.backgroundColor = 'white';
+		}, 1000);
+	});
+
 bgColor.addEventListener('keydown', e =>{
-	if (e.key == 'b')	
-	e.target.style.backgroundColor = 'blue';
-	e.target.style.color = 'white';
+	if (e.key == 't')	
+	e.target.style.backgroundColor = 'tan';
+	bgColor.addEventListener('keyup', e =>{
+		e.target.style.backgroundColor = 'white';
+	}, 1000);
 });
 
+///////////////////     Welcome to Fun Bus   //////////////////
+const funB = document.querySelector('.intro h2');
+funB.addEventListener('mouseleave', e =>{
+	e.target.style.backgroundColor = 'pink';
+	e.target.style.color = 'white';
+
+	setTimeout(function() {
+		e.target.style.backgroundColor = '';
+		e.target.style.color = '';
+			}, 1000);
+		}, false);
 
 
+///////////////////    h2 tags   //////////////////
 
-
-
-
-
-
+const H2tags = document.querySelectorAll('.text-content h2');
+H2tags[0].addEventListener('dblclick', e =>{
+	e.target.style.fontSize = '16rem';
+	e.target.style.color = 'silver';
+	setTimeout(function() {
+		e.target.style.fontSize = '';
+		e.target.style.color = '';
+			}, 1000);
+		}, false);
+H2tags[1].addEventListener('dblclick', e =>{
+	e.target.style.fontSize = '16rem';
+	e.target.style.color = 'silver';
+	setTimeout(function() {
+		e.target.style.fontSize = '';
+		e.target.style.color = '';
+			}, 1000);
+		}, false);
