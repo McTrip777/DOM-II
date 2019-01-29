@@ -45,10 +45,44 @@ homeBtn[3].addEventListener("mouseenter", e => {
 	}, 1500);
 }, false);
 
-const buttonSize = document.querySelector('.btn1');
-buttonSize.addEventListener('mouseover', e =>{
-	e.target.style.fontsize = 50;
-});
+const buttonSize1 = document.querySelector('.btn1');
+buttonSize1.addEventListener('mouseover', e =>{
+	e.target.innerHTML = "SIGN!";
+	e.target.style.color = "white";
+	e.target.style.backgroundColor = "black";
+
+setTimeout(function() {
+		e.target.innerHTML = "Sign Me up!";
+		e.target.style.backgroundColor = "";
+
+	}, 1500);
+}, false);
+
+const buttonSize2 = document.querySelector('.btn2');
+buttonSize2.addEventListener('mouseover', e =>{
+	e.target.innerHTML = "ME!";
+	e.target.style.color = "white";
+	e.target.style.backgroundColor = "black";
+
+setTimeout(function() {
+		e.target.innerHTML = "Sign Me up!";
+		e.target.style.backgroundColor = "";
+
+	}, 1500);
+}, false);
+
+const buttonSize3 = document.querySelector('.btn3');
+buttonSize3.addEventListener('mouseover', e =>{
+	e.target.innerHTML = "UP!";
+	e.target.style.color = "white";
+	e.target.style.backgroundColor = "black";
+
+setTimeout(function() {
+		e.target.innerHTML = "Sign Me up!";
+		e.target.style.backgroundColor = "";
+
+	}, 1500);
+}, false);
 
 /*
 const aboutUsBtn = document.querySelector('.nav-link2')
