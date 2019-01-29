@@ -1,12 +1,3 @@
-// Your code goes here
-	// * [ ] `wheel`
-	// * [ ] `drag / drop`
-	// * [ ] `load`
-	// * [ ] `focus`
-	// * [ ] `resize`
-	// * [ ] `scroll`
-	// * [ ] `select`
-    
 ///////////////////     NAV BAR //////////////////
 const homeBtn = document.querySelectorAll('a');
 homeBtn[0].addEventListener("mouseenter", e => {   
@@ -166,4 +157,19 @@ inImg.addEventListener('wheel', e =>{
 	});
 
 
+//////////////    bottom h4 tags  ////////////////
+const desH4 = document.querySelectorAll('.destination h4');
+desH4[0].addEventListener('keypress', e => {
+	if (e.key === 'a')
+		e.target.style.color = 'pink';    
+	});
 	
+
+	// mouseenter
+	// mouseover
+	// click
+	// keydown
+	// keyup
+	// mouseleave
+	// dblclick
+	// wheel
