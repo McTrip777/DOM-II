@@ -131,7 +131,7 @@ H2tags[1].addEventListener('dblclick', e =>{
 	e.target.style.color = 'silver';
 	e.stopPropagation();
 
-	setTimeout(function() {
+	setTimeout(() => {
 		e.target.style.fontSize = '';
 		e.target.style.color = '';
 			}, 1000);
@@ -164,6 +164,22 @@ desH4[0].addEventListener('keypress', e => {
 		e.target.style.color = 'pink';    
 	});
 	
+	// let adventure = document.querySelector('.map');
+	// window.addEventListener('drag', (e) => {
+	// 	adventure.classList.add('greyscale');
+	// }); 
+
+const firstPImg = document.querySelector('.img-content');
+window.addEventListener('drag', e => {
+	//console.log('dragging');
+	firstPImg.classList.add('blue');
+	}); 
+
+//////////////    bottom h4 tags  ////////////////
+window.addEventListener('load', function(){
+alert('Welcome to the Fun Bus')
+});
+ 
 
 	// mouseenter
 	// mouseover
@@ -173,3 +189,5 @@ desH4[0].addEventListener('keypress', e => {
 	// mouseleave
 	// dblclick
 	// wheel
+	// drag
+	//load
